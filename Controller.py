@@ -350,7 +350,7 @@ def check_for_nan():
     # check for NaN values
     if df.isnull().values.any():
 
-        # replace NaN values with mean for column
+        # replace NaN values with mean for column. <----- FIX ME (replace with mean not 0.0)
         df = df.fillna(0.0)
         df.to_csv('CSV_files/temp_csv.csv', index=False)
         display_csv_data()
