@@ -167,7 +167,7 @@ def train_and_test_model(column_name, test_size, random_state, test_rounds):
             for _ in range(test_rounds):
                 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state)
 
-                # Create and fit a linear regression model
+                # Create and fit model
                 model = svm.SVC(kernel='linear', C=2)
                 model.fit(X_train, y_train)
 
@@ -283,7 +283,7 @@ def standardize_data():
     # add headers back to df
     df.columns = headers
     # summarize transformed data
-    np.set_printoptions(precision=3)  # < ------ set floating point precision
+    np.set_printoptions(precision=3)  
     # save dataframe to csv
     df.to_csv('CSV_files/temp_csv.csv', index=False)
     display_csv_data()
@@ -310,7 +310,7 @@ def normalize_data():
     # add headers back to df
     df.columns = headers
     # summarize transformed data
-    np.set_printoptions(precision=3)  # < ------ set floating point precision
+    np.set_printoptions(precision=3)  
     # save dataframe to csv
     df.to_csv('CSV_files/temp_csv.csv', index=False)
     display_csv_data()
