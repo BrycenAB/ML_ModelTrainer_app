@@ -26,7 +26,7 @@ selected_datapoint = "None"
 def init_tkVars():
     # set the default values for the tkinter variables
     Test_data_size.set("0.2")
-    Training_total.set("30")
+    Training_total.set("10")
     Random_state.set("42")
 
 
