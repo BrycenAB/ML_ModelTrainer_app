@@ -1,5 +1,5 @@
 # SVM_ML_TKinterApp
-This project is a machine learning app that can utilize any CSV data on your device to train and test machine learning models using SVM. It provides various features such as rescaling data, standardizing data, normalizing data, binarizing data, uploading CSV data from your computer, and saving and uploading pickle models. It has two output windows: a log window that displays common output such as errors and success messages, and an output window that displays the selected CSV file. The log window also outputs the accuracy and mean squared error (MSE) of the model.
+This project is a machine learning app that can utilize any CSV data on your device to train and test machine learning models using an SVM algorithm. It provides various features such as rescaling data, standardizing data, normalizing data, replacing NaN values automatically, uploading CSV data from your computer, and saving and uploading pickle models. It has two output windows: a log window that displays common output such as errors and success messages, and an output window that displays the selected CSV file. The log window also outputs the accuracy and mean squared error (MSE) of the model.
 
 ---
 
