@@ -1,41 +1,112 @@
-# SVM_ML_TKinterApp
-This project is a machine learning app that can utilize any CSV data on your device to train and test machine learning models using an SVM algorithm. It provides various features such as rescaling data, standardizing data, normalizing data, replacing NaN values automatically, uploading CSV data from your computer, and saving and uploading pickle models. It has two output windows: a log window that displays common output such as errors and success messages, and an output window that displays the selected CSV file. The log window also outputs the accuracy and mean squared error (MSE) of the model.
+# Machine Learning Model Trainer and Predictor
+
+This project provides a GUI-based application for training, testing, and using machine learning models with user-uploaded CSV datasets. It features preprocessing tools, visualization, and the ability to save and upload models.
 
 ---
 
-# Dependencies
-* Pandas
-* Pickle
-* Tkinter
-* Numpy
-* Sklearn ( pip install scikit-learn )
-* Matplotlib (not currently active but the code is still there)
+## Features
+
+- **GUI Interface**: Built with `tkinter` for ease of use.
+- **CSV Uploading**: Upload datasets for training and prediction.
+- **Data Preprocessing**: Tools to rescale, normalize, standardize, and binarize data.
+- **Model Training**: Train models using various configurations.
+- **Model Persistence**: Save and upload trained models with `pickle`.
+- **Prediction**: Make predictions using uploaded or trained models.
+- **Logging**: View logs for actions performed within the app.
 
 ---
 
-# Features
-* Rescaling data
-* Standardizing data
-* Normalizing data
-* Binarizing data
-* Uploading CSV data from your computer
-* Saving and uploading pickle models
-* Log window for displaying output messages, errors, accuracy, and MSE
-* Output window for displaying the selected CSV file
+## Installation
+
+### Prerequisites
+- Python 3.x
+- Required libraries listed in `requirements.txt`
+
+### Clone the Repository
+```bash
+git clone https://github.com/your-repository-link.git
+cd your-project-directory
+```
+
+### Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-# Usage 
-1. Click the "Upload .csv File" button and select the CSV file you wish to use.
-2. Select the data point to be predicted from the dropdown below the file upload button.
-3. Adjust the settings according to your preferences.
-4. Click the "Test/Train Split" button to train and test the model.
-5. If you wish to save the model, enter the desired name into the "Pickle File Name" box and click the "Save Model" button.
-6. The accuracy and MSE of the model will be displayed in the "Log" box while the CSV data will be displayed to the left in the larger box.
+## Usage
+
+1. **Run the Application**:
+   ```bash
+   python Main.py
+   ```
+
+2. **Features Overview**:
+   - **Upload CSV**: Click the "Upload .csv file" button to load a dataset.
+   - **Preprocess Data**: Use buttons to rescale, normalize, standardize, or binarize data.
+   - **Train Model**: Configure parameters like test size, random state, and training rounds, then train the model.
+   - **Save Model**: Save the best-trained model as a `.pickle` file.
+   - **Upload Model**: Upload an existing model for predictions.
+   - **Make Predictions**: Input feature values and predict target outcomes using the model.
+
+3. **Reset All**: Reset the application to its initial state.
 
 ---
-# Future Plans
 
-* Implement Data Visualization using Matplotlib.
-* Implement Data Visualization using Seaborn.
-* Optimization.
+## Project Structure
+
+- **CSV_files/**: Stores temporary and preprocessed CSV files.
+- **SampleData/**: Contains example datasets for testing.
+- **pickle_models/**: Contains saved machine learning models.
+- **Controller.py**: Handles backend logic for preprocessing, training, and prediction.
+- **Main.py**: Main entry point to launch the application.
+- **View.py**: GUI implementation using `tkinter`.
+- **README.md**: Documentation for the project.
+
+---
+
+## Requirements
+
+### Python Libraries
+- tkinter
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+
+---
+
+## Example Workflow
+
+1. **Upload a CSV File**:
+   - Click "Upload .csv file" and select a dataset.
+   - View the dataset in the "CSV Data" section.
+
+2. **Preprocess Data**:
+   - Use the buttons (e.g., "Rescale Data", "Normalize Data") to preprocess the dataset.
+
+3. **Train a Model**:
+   - Configure parameters (e.g., test size, random state).
+   - Click "Test/Train Split" to train a model.
+   - View accuracy and log details.
+
+4. **Save or Upload a Model**:
+   - Save the trained model using "Save Model".
+   - Upload an existing model for predictions.
+
+5. **Make Predictions**:
+   - Enter input values and click "Run Model" to predict outcomes.
+
+---
+
+## Contribution
+
+Contributions are welcome! Feel free to fork the repository, submit issues, or make pull requests for new features or bug fixes.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
